@@ -34,7 +34,7 @@ export const aboutData = [
   {
     title: "Satisified clients",
     amount: "184",
-    icon: <AwardFillIcon />,
+    icon: <GroupLineIcon />,
   },
   {
     title: "Awards and recognition",
@@ -51,3 +51,69 @@ export const arrowLeftIcon = <ArrowLeftSFillIcon />;
 
 export const aboutText =
   "Hello, I'm Vin Rain, a web developer and designer. I blend the technical skills of web development with the creative aspects of web design. I code in HTML, CSS, JavaScript, React, NextJS... to build functional and responsive websites which are visually appealing and user friendly. My role ensures that websites not only work well but also look great and provide excellent user experience.";
+
+
+  //Experience
+  export const experienceData = [
+    {
+      year: "2024",
+      title: "Senior Web Developer",
+      education: "Bachelor of Science in Computer Science",
+      experiences: [
+        "Led the development of a storage management platform using Next.js and Appwrite.",
+        "Implemented dynamic dashboards with Tailwind CSS and Shadcn UI components.",
+        "Optimized website performance, reducing load time by 30%.",
+      ],
+    },
+    {
+      year: "2023",
+      title: "Web Developer",
+      education: "Online Courses and Certifications",
+      experiences: [
+        "Built a blog website using the MERN stack with full authentication and an admin dashboard.",
+        "Integrated secure authentication workflows with NextAuth.js.",
+        "Deployed and maintained web applications on Vercel.",
+      ],
+    },
+    {
+      year: "2022",
+      title: "Frontend Developer Intern",
+      education: "Coding Bootcamp Graduate",
+      experiences: [
+        "Created responsive user interfaces using React.js and Tailwind CSS.",
+        "Collaborated with backend teams to integrate RESTful APIs.",
+        "Developed reusable components to streamline future development projects.",
+      ],
+    },
+    {
+      year: "2021",
+      title: "Freelance Web Developer",
+      education: "Self-taught",
+      experiences: [
+        "Designed and launched small business websites with custom CMS solutions.",
+        "Implemented SEO best practices to increase client visibility by 50%.",
+        "Provided ongoing maintenance and updates for client sites.",
+      ],
+    },
+    {
+      year: "2020",
+      title: "Junior Developer",
+      education: "Diploma in Web Development",
+      experiences: [
+        "Worked on frontend features and bug fixes for e-commerce platforms.",
+        "Collaborated with designers to ensure pixel-perfect implementation.",
+        "Participated in code reviews to improve code quality and maintainability.",
+      ],
+    },
+    {
+      year: "2019",
+      title: "Intern Web Developer",
+      education: "High School Graduate",
+      experiences: [
+        "Learned foundational web technologies like HTML, CSS, and JavaScript.",
+        "Assisted in creating landing pages for local businesses.",
+        "Shadowed senior developers to understand project workflows.",
+      ],
+    },
+  ];
+  
