@@ -195,3 +195,50 @@ export const skillsData = [
     icon: "/assets/skills/vscode.png",
   },
 ];
+
+//Reviews
+import StarFillIcon from "remixicon-react/StarFillIcon";
+import StarHalfLineIcon from "remixicon-react/StarHalfLineIcon";
+import ArrowLeftSLineIcon from "remixicon-react/ArrowLeftSLineIcon";
+import ArrowRightSLineIcon from "remixicon-react/ArrowRightSLineIcon";
+
+export const starIcons = [<StarFillIcon />, <StarHalfLineIcon />];
+export const arrowIcons = [<ArrowLeftSLineIcon />, <ArrowRightSLineIcon />];
+
+export const reviewData = [
+  {
+    image: "/assets/reviews/client-1.png",
+    name: "Jane Smith, XYZ Corp",
+    comment:
+      "Incredible attention to detail and deep expertise in web development. Delivered our project ahead of schedule and exceeded expectations!",
+    stars: [1, 1, 1, 1, 1],
+  },
+  {
+    image: "/assets/reviews/client-2.png",
+    name: "Michael Lee, ABC Startups",
+    comment:
+      "Great communication and problem-solving skills. Our website redesign significantly improved user engagement.",
+    stars: [1, 1, 1, 1, 0.5],
+  },
+  {
+    image: "/assets/reviews/client-3.png",
+    name: "Sophia Green, Freelance Designer",
+    comment:
+      "A true collaborator! Made implementing complex UI designs a breeze with his deep knowledge of Tailwind CSS and React.",
+    stars: [1, 1, 1, 1, 1],
+  },
+  {
+    image: "/assets/reviews/client-4.png",
+    name: "Daniel Thompson, LMN Tech",
+    comment:
+      "Handled backend integration seamlessly. His work with NextAuth.js and Appwrite was crucial to our secure authentication system.",
+    stars: [1, 1, 1, 1, 0.7],
+  },
+  {
+    image: "/assets/reviews/client-5.png",
+    name: "Emily Johnson, Small Business Owner",
+    comment:
+      "Created a stunning website for my business that attracts more customers daily. Very professional and supportive throughout the process.",
+    stars: [1, 1, 1, 1, 1],
+  },
+];
