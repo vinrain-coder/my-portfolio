@@ -242,3 +242,80 @@ export const reviewData = [
     stars: [1, 1, 1, 1, 1],
   },
 ];
+
+export const projectsButton = [
+  "All",
+  "Figma",
+  "Photoshop",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "ReactJS",
+  "TailwindCSS",
+  "NextJS",
+  "FramerMotion",
+  "ThreeJS",
+];
+
+export const projectsData = [
+  {
+    name: "Invoicer",
+    desc: "A comprehensive invoice management solution with dynamic dashboards and user authentication.",
+    url: "/assets/projects/image-1.jpg",
+    tech: ["NextJS", "TailwindCSS", "FramerMotion", "JavaScript"],
+  },
+  {
+    name: "3D React Landing Page",
+    desc: "An animated, interactive landing page with 3D elements and smooth transitions.",
+    url: "/assets/projects/image-2.jpg",
+    tech: ["ReactJS", "ThreeJS", "TailwindCSS", "JavaScript"],
+  },
+  {
+    name: "Storage Manager",
+    desc: "A web application for managing and organizing files with cloud storage integration.",
+    url: "/assets/projects/image-3.jpg",
+    tech: ["NextJS", "JavaScript", "TailwindCSS", "Figma"],
+  },
+  {
+    name: "MERN Blog Platform",
+    desc: "A full-stack blog website with an admin dashboard and user authentication.",
+    url: "/assets/projects/image-4.jpg",
+    tech: ["ReactJS", "JavaScript", "CSS", "Photoshop"],
+  },
+  {
+    name: "Portfolio Website",
+    desc: "A personal portfolio showcasing projects, skills, and experience.",
+    url: "/assets/projects/image-5.jpg",
+    tech: ["NextJS", "FramerMotion", "HTML", "TailwindCSS"],
+  },
+  {
+    name: "E-commerce Platform",
+    desc: "A scalable e-commerce solution with product management and payment integration.",
+    url: "/assets/projects/image-6.jpg",
+    tech: ["ReactJS", "JavaScript", "TailwindCSS", "Figma"],
+  },
+  {
+    name: "Task Manager",
+    desc: "A task-tracking app with drag-and-drop functionality and progress tracking.",
+    url: "/assets/projects/image-7.jpg",
+    tech: ["ReactJS", "HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "Chat Application",
+    desc: "A real-time chat app with private and group messaging features.",
+    url: "/assets/projects/image-8.jpg",
+    tech: ["NextJS", "JavaScript", "TailwindCSS", "Figma"],
+  },
+  {
+    name: "Recipe Finder",
+    desc: "An app to search, filter, and save recipes with an interactive UI.",
+    url: "/assets/projects/image-9.jpg",
+    tech: ["ReactJS", "TailwindCSS", "JavaScript", "Photoshop"],
+  },
+  {
+    name: "Weather Dashboard",
+    desc: "A weather forecast dashboard displaying real-time data from multiple cities.",
+    url: "/assets/projects/image-10.jpg",
+    tech: ["ReactJS", "JavaScript", "CSS", "Figma"],
+  },
+];
