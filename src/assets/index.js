@@ -319,3 +319,51 @@ export const projectsData = [
     tech: ["ReactJS", "JavaScript", "CSS", "Figma"],
   },
 ];
+
+//Pricing Plans
+export const pricingPlans = [
+  {
+    title: "Basic",
+    pricing: "$10 - $20",
+    features: [
+      "Access to standard features",
+      "Email support",
+      "10 project limits",
+      "Basic analytics dashboard",
+    ],
+    recommended: "Freelancers and small businesses",
+  },
+  {
+    title: "Premium",
+    pricing: "$70 - $100",
+    features: [
+      "Access to all features",
+      "24/7 premium support",
+      "Unlimited projects and users",
+      "Custom analytics reports",
+      "Dedicated account manager",
+      "Integration with third-party tools",
+    ],
+    recommended: "Large enterprises and organizations",
+  },
+  {
+    title: "Standard",
+    pricing: "$30 - $50",
+    features: [
+      "Access to all standard features",
+      "Priority email support",
+      "Unlimited projects",
+      "Advanced analytics dashboard",
+      "Team collaboration tools",
+    ],
+    recommended: "Growing teams and mid-sized businesses",
+  },
+];
+
+import CheckLineIcon from "remixicon-react/CheckLineIcon";
+
+export const checkIcon = <CheckLineIcon />;
+
+import CopyrightLineIcon from "remixicon-react/CopyrightLineIcon";
+
+export const copyRightIcon = <CopyrightLineIcon />;
