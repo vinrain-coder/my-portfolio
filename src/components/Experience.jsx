@@ -20,7 +20,7 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="relative py-20 px-4 md:px-12 lg:px-32 xl:px-48"
+      className="relative py-20"
     >
       <Heading text={"Experience and education"} />
       <Image
@@ -28,7 +28,7 @@ const Experience = () => {
         alt="experience image"
         width={400}
         height={400}
-        className="absolute -top-4 right-48 opacity-70 lg:hidden"
+        className="absolute -top-4 right-0 opacity-70 lg:hidden"
       />
       <div
         ref={containerRef}
@@ -48,18 +48,18 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, type: "spring", stiffness: 50 }}
-              className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide sm:text-sm"
+              className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide sm:text-sm dark:bg-zinc-700 transition-colors"
             >
-              <h1 className="text-xl sm:text-lg font-light text-gray-700">
+              <h1 className="text-xl sm:text-lg font-light text-gray-700 dark:text-white">
                 {data.title}
               </h1>
-              <p className="text-gray-800">
+              <p className="text-gray-800 dark:text-gray-100">
                 <span className="block font-light">Education</span>
                 <span className="block pl-2 font-extralight">
                   {data.education}
                 </span>
               </p>
-              <div className="text-gray-800">
+              <div className="text-gray-800 dark:text-gray-200 transition-colors">
                 <span className="font-light">Experience</span>
                 <ul className="pl-2">
                   {data.experiences.map((exp, j) => (

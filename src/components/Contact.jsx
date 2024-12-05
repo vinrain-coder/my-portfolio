@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="h-screen py-20 px-4 md:px-12 lg:px-32 xl:px-48"
+      className="h-screen py-20"
     >
       <Heading text={"Get in Touch"} />
       <div className="w-full h-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
@@ -36,29 +36,29 @@ const Contact = () => {
           <div className="w-full flex lg:flex-col gap-x-3 lg:gap-y-3">
             <input
               type="text"
-              className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
+              className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
               placeholder="Your Name"
             />
             <input
               type="email"
-              className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
+              className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
               placeholder="Your Email"
             />
           </div>
           <input
             type="text"
-            className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
+            className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
             placeholder="Subject"
           />
           <textarea
             name=""
             id=""
-            className="max-h-[250px] min-h[150px] border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-500 outline-none"
+            className="max-h-[250px] min-h[150px] border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
             placeholder="Write me a message..."
           ></textarea>
           <input
             type="submit"
-            className="w-full border border-yellow-500 rounded-md bg-yellow-600 px-4 py-2 text-sm font-light tracking-wider text-white outline-none hover:bg-yellow-500 transition-colors cursor-pointer"
+            className="w-full border border-yellow-500 rounded-md bg-yellow-600 px-4 py-2 text-md font-light tracking-wider text-white outline-none hover:bg-yellow-500 transition-colors cursor-pointer"
             placeholder="Subject"
             value="Send Message"
           />

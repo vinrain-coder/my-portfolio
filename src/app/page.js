@@ -10,6 +10,7 @@ import Projects from "@/components/Projects";
 import Questions from "@/components/Questions";
 import Reviews from "@/components/Reviews";
 import Skills from "@/components/Skills";
+import Toggle from "@/components/sub/Toggle";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -36,18 +37,20 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Navbar id={id} />
-      <div ref={compsRef}>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Reviews />
-        <Projects />
-        <PricingPlans />
-        <Contact />
-        <Questions />
-      </div>
+      <Toggle>
+        <Navbar id={id} />
+        <div ref={compsRef} className="w-min ml-2 sm:ml-0">
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Reviews />
+          <Projects />
+          <PricingPlans />
+          <Contact />
+          <Questions />
+        </div>
+      </Toggle>
     </>
   );
 }
