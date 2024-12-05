@@ -4,7 +4,7 @@ import { copyRightIcon, navbarData } from "@/assets";
 
 const Navbar = ({ id }) => {
   return (
-    <div className="w-[70px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-4 py-4 z-10">
+    <div className="w-[45px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-2 py-4 z-10">
       <a href="#">
         <span className="text-3xl font-semibold text-red-400">V</span>.
         <span className="block w-min rotate-90 origin-bottom text-[12px] font-semibold dark:text-white">
