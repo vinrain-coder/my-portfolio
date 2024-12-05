@@ -39,7 +39,7 @@ export default function Home() {
     <>
       <Toggle>
         <Navbar id={id} />
-        <div ref={compsRef} className="w-min">
+        <div ref={compsRef} className="w-min px-4">
           <Hero />
           <About />
           <Experience />
