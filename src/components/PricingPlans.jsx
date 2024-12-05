@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Heading from "./sub/Heading";
 import { checkIcon, pricingPlans } from "@/assets";
 import { motion } from "framer-motion";

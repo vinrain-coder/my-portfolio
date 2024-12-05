@@ -367,3 +367,111 @@ export const checkIcon = <CheckLineIcon />;
 import CopyrightLineIcon from "remixicon-react/CopyrightLineIcon";
 
 export const copyRightIcon = <CopyrightLineIcon />;
+
+//Q & A
+export const questions = [
+  {
+    question: "What services do you offer?",
+    answer:
+      "I offer end-to-end web development services, including frontend development, backend integration, responsive design, and custom web applications. I specialize in Next.js, React, TypeScript, and Tailwind CSS.",
+  },
+  {
+    question: "Do you provide custom solutions tailored to my business needs?",
+    answer:
+      "Absolutely! I work closely with clients to understand their unique requirements and deliver custom solutions that align with their business goals and target audience.",
+  },
+  {
+    question: "How do you ensure the quality of your work?",
+    answer:
+      "I follow industry best practices, write clean and maintainable code, and conduct thorough testing. I also collaborate with clients throughout the project to ensure their vision is accurately implemented.",
+  },
+  {
+    question: "Can you build responsive and mobile-friendly websites?",
+    answer:
+      "Yes, I use Tailwind CSS and other responsive design techniques to ensure that websites look and function perfectly on all devices, from desktops to smartphones.",
+  },
+  {
+    question: "What is your typical project timeline?",
+    answer:
+      "Project timelines vary depending on the complexity and scope. However, I always provide a detailed project plan and milestones, ensuring timely delivery without compromising quality.",
+  },
+  {
+    question: "Do you offer support and maintenance after project completion?",
+    answer:
+      "Yes, I offer ongoing support and maintenance to ensure your website remains updated, secure, and functional as your business evolves.",
+  },
+  {
+    question: "What is your approach to SEO and performance optimization?",
+    answer:
+      "I implement SEO best practices, optimize website performance through code efficiency, and ensure fast loading times to enhance user experience and search engine rankings.",
+  },
+  {
+    question: "Can you integrate third-party services and APIs?",
+    answer:
+      "Yes, I have experience integrating various third-party services and APIs, such as payment gateways, cloud storage, and authentication providers like NextAuth.js.",
+  },
+  {
+    question: "How do you handle project communication?",
+    answer:
+      "I maintain transparent and regular communication through tools like Slack, email, and project management platforms, ensuring you are always updated on the project's progress.",
+  },
+  {
+    question: "Do you work with existing codebases or only new projects?",
+    answer:
+      "I can work on both existing codebases and new projects. I ensure seamless integration and code refactoring to improve existing systems if needed.",
+  },
+  {
+    question: "What is your pricing structure?",
+    answer:
+      "Pricing depends on the project's complexity and requirements. I offer flexible pricing models, including fixed-rate, hourly, or milestone-based payments.",
+  },
+  {
+    question: "How do you handle revisions and feedback?",
+    answer:
+      "I encourage client feedback throughout the development process and offer multiple revision cycles to ensure the final product meets your expectations.",
+  },
+  {
+    question: "Do you provide design services as well?",
+    answer:
+      "While my primary focus is development, I collaborate with designers or can implement your provided designs with pixel-perfect accuracy using modern UI frameworks.",
+  },
+  {
+    question: "What kind of clients have you worked with?",
+    answer:
+      "I have worked with startups, small businesses, and large enterprises across various industries, delivering tailored solutions that meet diverse business needs.",
+  },
+  {
+    question: "How can I get started with you on a project?",
+    answer:
+      "You can contact me through my website's contact form or email. We will discuss your project requirements, goals, and next steps during an initial consultation.",
+  },
+  {
+    question: "Do you provide documentation for your projects?",
+    answer:
+      "Yes, I provide comprehensive documentation to help you understand the code, architecture, and functionality of your project for future reference or updates.",
+  },
+  {
+    question: "How do you ensure data security in your projects?",
+    answer:
+      "I follow best practices for data security, including secure authentication, data encryption, and compliance with privacy standards to protect your sensitive information.",
+  },
+  {
+    question: "Can you migrate an existing website to a new technology stack?",
+    answer:
+      "Yes, I can help migrate your existing website to modern technologies like Next.js or React, ensuring improved performance, scalability, and maintainability.",
+  },
+  {
+    question: "What kind of testing do you perform?",
+    answer:
+      "I conduct unit testing, integration testing, and end-to-end testing to ensure that your application is reliable, bug-free, and performs well under various scenarios.",
+  },
+  {
+    question: "Do you offer training or guidance after project delivery?",
+    answer:
+      "Yes, I provide training sessions and detailed walkthroughs to help you or your team understand and manage the application effectively after delivery.",
+  },
+];
+
+import ArrowDropDownLineIcon from "remixicon-react/ArrowDropDownLineIcon";
+
+export const questionArrow =<ArrowDropDownLineIcon/>
