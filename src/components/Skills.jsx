@@ -20,7 +20,10 @@ const Skills = () => {
     },
   };
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-y-20 px-4 md:px-12 lg:px-32 xl:px-48">
+    <div
+      id="skills"
+      className="min-h-screen flex flex-col items-center justify-center gap-y-20 px-4 md:px-12 lg:px-32 xl:px-48"
+    >
       <Heading text={"Skills"} />
       <div className="w-full flex justify-between flex-wrap gap-x-8 gap-y-10 lg:gap-y-6">
         {skillsData.map((item, i) => (
@@ -30,7 +33,7 @@ const Skills = () => {
             initial="hidden"
             whileInView="visible"
             whileHover={{ scale: 1.1 }}
-            viewport={{margin:'50px', once:true}}
+            viewport={{ margin: "50px", once: true }}
             key={i}
             className="flex items-center justify-center gap-x-3 rounded-xl border border-yellow-500 bg-zinc-300 px-5 py-2 lg:px-2"
           >

@@ -22,7 +22,10 @@ const Projects = () => {
     prevIndex.current = index;
   }, [index]);
   return (
-    <div className="min-h-screen py-20 px-4 md:px-12 lg:px-32 xl:px-48">
+    <div
+      id="projects"
+      className="min-h-screen py-20 px-4 md:px-12 lg:px-32 xl:px-48"
+    >
       <Heading />
       <div className="flex flex-wrap items-center justify-between gap-4 py-10">
         {projectsButton.map((text, i) => (
@@ -30,7 +33,7 @@ const Projects = () => {
             key={i}
             ref={(el) => buttonsRef.current.push(el)}
             onClick={() => {
-                setTech(text)
+              setTech(text);
               setIndex(i);
             }}
             initial={{ opacity: i === 0 ? 1 : 0.5, scale: i === 0 ? 1.2 : 1 }}

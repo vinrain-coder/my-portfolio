@@ -18,7 +18,10 @@ const Experience = () => {
 
   const scrollY = useSpring(scrollYProgress, { stiffness: 200, damping: 20 });
   return (
-    <div className="relative py-20 px-4 md:px-12 lg:px-32 xl:px-48">
+    <div
+      id="experience"
+      className="relative py-20 px-4 md:px-12 lg:px-32 xl:px-48"
+    >
       <Heading text={"Experience and education"} />
       <Image
         src={"/assets/education.png"}
@@ -36,7 +39,7 @@ const Experience = () => {
             key={`id-${i}`}
             className={`w-[600px] xl:w-[480px] sm:w-full px-12 sm:px-0 relative -left-[300px] ${
               i % 2 === 0
-                ? "left-[3oopx] xl:-left-[240px] lg:-left-0"
+                ? "left-[300px] xl:-left-[240px] lg:-left-0"
                 : "left-[300px] xl:left-[240px] lg:left-0"
             }`}
           >
