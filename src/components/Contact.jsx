@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="h-screen lg:h-auto py-20 lg:py-40 xs:py-0"
+      className="h-screen lg:h-auto py-20 lg:py-40 xs:py-10"
     >
       <Heading text={"Get in Touch"} />
       <div className="w-full h-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
