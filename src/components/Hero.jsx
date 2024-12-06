@@ -92,7 +92,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="mt-8 flex justify-center gap-x-10 sm:gap-x-1 text-3xl text-yellow-600 sm:text-2xl"
+          className="mt-8 flex justify-center gap-x-10 sm:gap-x-2 text-3xl text-yellow-600 sm:text-2xl"
         >
           {heroIcons.map((item, i) => (
             <a

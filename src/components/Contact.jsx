@@ -1,26 +1,14 @@
 "use client";
 
-import { useState, useReducer, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Heading from "./sub/Heading";
 import emailjs from "@emailjs/browser";
 
-// Form Reducer to handle form state updates
-const formReducer = (state, action) => {
-  switch (action.type) {
-    case "SET_FIELD":
-      return { ...state, [action.name]: action.value };
-    case "RESET_FORM":
-      return { name: "", email: "", subject: "", message: "" };
-    default:
-      return state;
-  }
-};
-
 const Contact = () => {
-  // Initialize form state with useReducer
-  const [form, dispatch] = useReducer(formReducer, {
+  const formRef = useRef();
+  const [form, setForm] = useState({
     name: "",
     email: "",
     subject: "",
@@ -34,14 +22,11 @@ const Contact = () => {
 
   // Handle input changes
   const handleChange = (e) => {
-    dispatch({
-      type: "SET_FIELD",
-      name: e.target.name,
-      value: e.target.value,
-    });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Validate form inputs
+  // Validate the form
   const validateForm = () => {
     const { name, email, subject, message } = form;
     if (!name.trim()) {
@@ -77,9 +62,9 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
+          to_name: "Vincent",
           from_name: form.name,
           from_email: form.email,
-          subject: form.subject,
           message: form.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
@@ -89,7 +74,7 @@ const Contact = () => {
         message: "Message sent successfully! I will get back to you soon.",
         isError: false,
       });
-      dispatch({ type: "RESET_FORM" });
+      setForm({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("Email sending error:", error);
       setResponseMessage({
@@ -119,8 +104,8 @@ const Contact = () => {
             className="w-[400px] rounded-md opacity-80"
           />
         </motion.div>
-
         <motion.form
+          ref={formRef}
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 150 }}
           whileInView={{ opacity: 1, x: 0 }}
