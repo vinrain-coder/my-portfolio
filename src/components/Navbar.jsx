@@ -11,7 +11,7 @@ const Navbar = ({ id }) => {
           Rain
         </span>
       </a>
-      <div className="flex flex-col gap-2 mb-12 xs:gap-y-0">
+      <div className="flex flex-col gap-2 mb-12 xs:gap-y-4">
         {navbarData.map((item, i) => (
           <a
             href={`/#${item.id}`}
