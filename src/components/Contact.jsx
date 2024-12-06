@@ -41,7 +41,7 @@ const Contact = () => {
       );
 
       setResponseMessage({
-        message: "Message sent successfully! I will get back to you soon.",
+        message: "Thank you! I will get back to you soon.",
         isError: false,
       });
     } catch (error) {
