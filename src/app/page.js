@@ -41,7 +41,7 @@ export default function Home() {
       <Load />
       <Toggle>
         <Navbar id={id} />
-        <div ref={compsRef} className="w-full max-w-5xl mx-auto px-4">
+        <div ref={compsRef} className="w-full max-w-5xl mx-auto px-1">
           <Hero />
           <About />
           <Experience />
