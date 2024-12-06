@@ -6,13 +6,28 @@ import YoutubeLineIcon from "remixicon-react/YoutubeLineIcon";
 import GithubLineIcon from "remixicon-react/GithubLineIcon";
 
 export const heroIcons = [
-  /* eslint-disable react/jsx-key */
-  <InstagramLineIcon />,
-  <FacebookCircleLineIcon />,
-  <DribbbleLineIcon />,
-  <YoutubeLineIcon />,
-  <GithubLineIcon />,
+  {
+    icon: <InstagramLineIcon />,
+    link: "https://www.instagram.com/yourprofile",
+  },
+  {
+    icon: <FacebookCircleLineIcon />,
+    link: "https://www.facebook.com/vincent.raini.9",
+  },
+  {
+    icon: <DribbbleLineIcon />,
+    link: "https://www.dribbble.com",
+  },
+  {
+    icon: <YoutubeLineIcon />,
+    link: "https://www.youtube.com/vinrain",
+  },
+  {
+    icon: <GithubLineIcon />,
+    link: "https://github.com/vinrain-coder",
+  },
 ];
+
 
 //About me
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
@@ -23,22 +38,22 @@ import AwardFillIcon from "remixicon-react/AwardFillIcon";
 export const aboutData = [
   {
     title: "Github repos",
-    amount: "150",
+    amount: "45",
     icon: <GithubFillIcon />,
   },
   {
     title: "Projects",
-    amount: "127",
+    amount: "24",
     icon: <Projector2LineIcon />,
   },
   {
     title: "Clients",
-    amount: "184",
+    amount: "15",
     icon: <GroupLineIcon />,
   },
   {
     title: "Awards",
-    amount: "25",
+    amount: "5",
     icon: <AwardFillIcon />,
   },
 ];
@@ -202,26 +217,20 @@ import StarHalfLineIcon from "remixicon-react/StarHalfLineIcon";
 import ArrowLeftSLineIcon from "remixicon-react/ArrowLeftSLineIcon";
 import ArrowRightSLineIcon from "remixicon-react/ArrowRightSLineIcon";
 
+/* eslint-disable react/jsx-key */
 export const starIcons = [<StarFillIcon />, <StarHalfLineIcon />];
 export const arrowIcons = [<ArrowLeftSLineIcon />, <ArrowRightSLineIcon />];
 
 export const reviewData = [
   {
     image: "/assets/reviews/client-1.png",
-    name: "Jane Smith, XYZ Corp",
+    name: "V. Barrack",
     comment:
-      "Incredible attention to detail and deep expertise in web development. Delivered our project ahead of schedule and exceeded expectations!",
+      "Created a stunning website for my business that attracts more customers daily. Very professional and supportive throughout the process.",
     stars: [1, 1, 1, 1, 1],
   },
   {
     image: "/assets/reviews/client-2.png",
-    name: "Michael Lee, ABC Startups",
-    comment:
-      "Great communication and problem-solving skills. Our website redesign significantly improved user engagement.",
-    stars: [1, 1, 1, 1, 0.5],
-  },
-  {
-    image: "/assets/reviews/client-3.png",
     name: "Sophia Green, Freelance Designer",
     comment:
       "A true collaborator! Made implementing complex UI designs a breeze with his deep knowledge of Tailwind CSS and React.",
@@ -233,13 +242,6 @@ export const reviewData = [
     comment:
       "Handled backend integration seamlessly. His work with NextAuth.js and Appwrite was crucial to our secure authentication system.",
     stars: [1, 1, 1, 1, 0.7],
-  },
-  {
-    image: "/assets/reviews/client-5.png",
-    name: "Emily Johnson, Small Business Owner",
-    comment:
-      "Created a stunning website for my business that attracts more customers daily. Very professional and supportive throughout the process.",
-    stars: [1, 1, 1, 1, 1],
   },
 ];
 
@@ -259,64 +261,53 @@ export const projectsButton = [
 
 export const projectsData = [
   {
-    name: "Invoicer",
-    desc: "A comprehensive invoice management solution with dynamic dashboards and user authentication.",
-    url: "/assets/projects/image-1.jpg",
+    name: "Social Media App - Vingram",
+    desc: "A feature-rich social media app with dynamic dashboards, user authentication, and social connectivity.",
+    url: "/assets/projects/image-1.png",
     tech: ["NextJS", "TailwindCSS", "FramerMotion", "JavaScript"],
+    link: "https://vingram.vercel.app",
   },
   {
-    name: "3D React Landing Page",
-    desc: "An animated, interactive landing page with 3D elements and smooth transitions.",
-    url: "/assets/projects/image-2.jpg",
+    name: "SAAS Landing Page",
+    desc: "An engaging SAAS landing page with interactive 3D elements and smooth animations.",
+    url: "/assets/projects/image-2.png",
     tech: ["ReactJS", "ThreeJS", "TailwindCSS", "JavaScript"],
+    link: "https://brainwave-tau-one.vercel.app",
   },
   {
-    name: "Storage Manager",
-    desc: "A web application for managing and organizing files with cloud storage integration.",
-    url: "/assets/projects/image-3.jpg",
+    name: "Ecommerce Website - ShoePedi",
+    desc: "A sleek e-commerce platform for ShoePedi with cloud storage integration and efficient product management.",
+    url: "/assets/projects/image-3.png",
     tech: ["NextJS", "JavaScript", "TailwindCSS", "Figma"],
+    link: "https://shoepedi.vercel.app",
   },
   {
-    name: "MERN Blog Platform",
-    desc: "A full-stack blog website with an admin dashboard and user authentication.",
-    url: "/assets/projects/image-4.jpg",
+    name: "Bank Landing Page",
+    desc: "A professional landing page for a bank, featuring financial solutions and a user-friendly interface.",
+    url: "/assets/projects/image-4.png",
     tech: ["ReactJS", "JavaScript", "CSS", "Photoshop"],
+    link: "https://hubank.vercel.app",
   },
   {
-    name: "Portfolio Website",
-    desc: "A personal portfolio showcasing projects, skills, and experience.",
-    url: "/assets/projects/image-5.jpg",
+    name: "Real Estate - FindHouse",
+    desc: "A modern real estate platform for finding houses, showcasing properties with a sleek design.",
+    url: "/assets/projects/image-5.png",
     tech: ["NextJS", "FramerMotion", "HTML", "TailwindCSS"],
+    link: "https://findhouse-11nt.onrender.com/",
   },
   {
-    name: "E-commerce Platform",
-    desc: "A scalable e-commerce solution with product management and payment integration.",
-    url: "/assets/projects/image-6.jpg",
+    name: "Blog Website",
+    desc: "A scalable blogging platform with a customizable admin dashboard and user authentication.",
+    url: "/assets/projects/image-6.png",
     tech: ["ReactJS", "JavaScript", "TailwindCSS", "Figma"],
+    link: "https://mern-blog-website-j8vs.onrender.com/",
   },
   {
-    name: "Task Manager",
-    desc: "A task-tracking app with drag-and-drop functionality and progress tracking.",
-    url: "/assets/projects/image-7.jpg",
+    name: "Patient Management Platform",
+    desc: "A comprehensive platform for managing patients and scheduling appointments.",
+    url: "/assets/projects/image-7.png",
     tech: ["ReactJS", "HTML", "CSS", "JavaScript"],
-  },
-  {
-    name: "Chat Application",
-    desc: "A real-time chat app with private and group messaging features.",
-    url: "/assets/projects/image-8.jpg",
-    tech: ["NextJS", "JavaScript", "TailwindCSS", "Figma"],
-  },
-  {
-    name: "Recipe Finder",
-    desc: "An app to search, filter, and save recipes with an interactive UI.",
-    url: "/assets/projects/image-9.jpg",
-    tech: ["ReactJS", "TailwindCSS", "JavaScript", "Photoshop"],
-  },
-  {
-    name: "Weather Dashboard",
-    desc: "A weather forecast dashboard displaying real-time data from multiple cities.",
-    url: "/assets/projects/image-10.jpg",
-    tech: ["ReactJS", "JavaScript", "CSS", "Figma"],
+    link: "http://carepulse-lemon-psi.vercel.app/",
   },
 ];
 
@@ -324,39 +315,56 @@ export const projectsData = [
 export const pricingPlans = [
   {
     title: "Basic",
-    pricing: "$10 - $20",
+    pricing: "$100 - $150",
     features: [
-      "Access to standard features",
-      "Email support",
-      "10 project limits",
-      "Basic analytics dashboard",
+      "Responsive design for desktop and mobile",
+      "Up to 5 pages",
+      "Basic SEO optimization",
+      "Contact form with email notifications",
+      "Social media integration",
+      "Stock images and icons included",
+      "Simple content management system (CMS) setup",
+      "Delivery within 2 weeks",
+      "Free 1-week post-launch support",
     ],
-    recommended: "Freelancers and small businesses",
+    recommended: "Small businesses or personal projects with limited scope",
   },
   {
     title: "Premium",
-    pricing: "$70 - $100",
+    pricing: "From $500+",
     features: [
-      "Access to all features",
-      "24/7 premium support",
-      "Unlimited projects and users",
-      "Custom analytics reports",
-      "Dedicated account manager",
-      "Integration with third-party tools",
+      "Fully customized design and branding",
+      "Unlimited pages with complex features",
+      "Advanced SEO",
+      "E-commerce integration",
+      "Advanced animations",
+      "Multi-language support",
+      "Scalable architecture and database design",
+      "Enterprise-grade security measures",
+      "Dedicated project management",
+      "Delivery timeline based on project complexity (typically 2+ weeks)",
+      "Free 3-month post-launch support",
     ],
-    recommended: "Large enterprises and organizations",
+    recommended:
+      "Large businesses or enterprise-grade projects with comprehensive needs",
   },
   {
     title: "Standard",
-    pricing: "$30 - $50",
+    pricing: "$150 - $500",
     features: [
-      "Access to all standard features",
-      "Priority email support",
-      "Unlimited projects",
-      "Advanced analytics dashboard",
-      "Team collaboration tools",
+      "Custom design with advanced UI/UX",
+      "Up to 15 pages",
+      "SEO optimization and analytics integration",
+      "Integration with third-party APIs",
+      "Dynamic features",
+      "Enhanced CMS setup for easy content updates",
+      "Cross-browser compatibility testing",
+      "Performance optimization",
+      "Delivery within 4-6 weeks",
+      "Free 1-month post-launch support",
     ],
-    recommended: "Growing teams and mid-sized businesses",
+    recommended:
+      "Growing businesses or medium-scale projects with custom requirements",
   },
 ];
 

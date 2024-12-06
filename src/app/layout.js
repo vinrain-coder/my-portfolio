@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Vin Rain",
+  title: "Vin Rain | Web Dev",
   description: "Personal developer portfolio",
 };
 

@@ -94,20 +94,23 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600 sm:text-2xl"
         >
-          {heroIcons.map((icon, i) => (
+          {heroIcons.map((item, i) => (
             <a
-              href="#"
+              href={item.link}
               key={i}
-              className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="rounded-lg hover:bg-red-400 hover:text-white transition-colors p-2"
             >
-              {icon}
+              {item.icon}
             </a>
           ))}
         </motion.div>
+
         <motion.a
-        initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.7 }}
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.7 }}
           href="#"
           className="mt-7 block w-max rounded-lg bg-red-400 px-3 py-1 font-light capitalize tracking-wider mx-auto text-white hover:bg-red-500 transition-colors"
           onMouseEnter={() => setButtonHover(true)}
