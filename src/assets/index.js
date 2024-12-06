@@ -27,17 +27,17 @@ export const aboutData = [
     icon: <GithubFillIcon />,
   },
   {
-    title: "Successfull projects",
+    title: "Projects",
     amount: "127",
     icon: <Projector2LineIcon />,
   },
   {
-    title: "Satisified clients",
+    title: "Clients",
     amount: "184",
     icon: <GroupLineIcon />,
   },
   {
-    title: "Awards and recognition",
+    title: "Awards",
     amount: "25",
     icon: <AwardFillIcon />,
   },

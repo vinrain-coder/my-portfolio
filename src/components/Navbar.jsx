@@ -4,14 +4,14 @@ import { copyRightIcon, navbarData } from "@/assets";
 
 const Navbar = ({ id }) => {
   return (
-    <div className="w-[45px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-2 py-4 z-10">
+    <div className="w-[70px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-gray-200 px-2 py-4 z-10">
       <a href="#">
         <span className="text-3xl font-semibold text-red-400">V</span>.
         <span className="block w-min rotate-90 origin-bottom text-[12px] font-semibold dark:text-white">
           Rain
         </span>
       </a>
-      <div className="flex flex-col gap-2 mb-12">
+      <div className="flex flex-col gap-2 mb-12 xs:gap-y-0">
         {navbarData.map((item, i) => (
           <a
             href={`/#${item.id}`}
@@ -19,10 +19,10 @@ const Navbar = ({ id }) => {
             className="group flex flex-col items-center"
           >
             <span
-              className={`text-2xl group-hover:scale-125 transition-all ${
+              className={`text-2xl group-hover:scale-125 xs:group-hover:scale100 transition-all ${
                 item.id === id
-                  ? "text-red-500 scale-110"
-                  : "text-yellow-600 scale-100"
+                  ? "text-red-500 scale-110 xs:scale-80"
+                  : "text-yellow-600 scale-100 xs:scale-70"
               }`}
             >
               {item.icon}
@@ -37,7 +37,7 @@ const Navbar = ({ id }) => {
           </a>
         ))}
       </div>
-      <p className="flex items-center justify-center text-[15px] text-gray-500 bottom-0">
+      <p className="flex items-center justify-center text-[15px] xs:text-[11px] text-gray-500 bottom-0">
         <span className="absolute left-1/2 w-max flex items-center -rotate-90 origin-bottom-left tracking-wider dark:text-gray-200 transition-colors">
           {copyRightIcon}2022-{new Date().getFullYear()}
         </span>

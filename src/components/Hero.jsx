@@ -39,13 +39,18 @@ const Hero = () => {
 
   return (
     <div
-    id="home"
-      className="h-screen grid place-items-center"
+      id="home"
+      className="h-screen flex flex-col items-center justify-center place-items-center"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
     >
       <div className="">
-        <div className="flex flex-col items-center justify-center gap-y-3 font-light capitalize">
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="flex flex-col items-center justify-center gap-y-3 font-light capitalize"
+        >
           <motion.div
             className="flex
            items-center justify-center"
@@ -82,8 +87,13 @@ const Hero = () => {
           <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
             I like developing websites
           </p>
-        </div>
-        <div className="mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600 sm:text-2xl">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="mt-8 flex justify-center gap-x-10 text-3xl text-yellow-600 sm:text-2xl"
+        >
           {heroIcons.map((icon, i) => (
             <a
               href="#"
@@ -93,15 +103,18 @@ const Hero = () => {
               {icon}
             </a>
           ))}
-        </div>
-        <a
+        </motion.div>
+        <motion.a
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.7 }}
           href="#"
           className="mt-7 block w-max rounded-lg bg-red-400 px-3 py-1 font-light capitalize tracking-wider mx-auto text-white hover:bg-red-500 transition-colors"
           onMouseEnter={() => setButtonHover(true)}
           onMouseLeave={() => setButtonHover(false)}
         >
           Talk to me
-        </a>
+        </motion.a>
       </div>
     </div>
   );
