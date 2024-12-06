@@ -74,7 +74,7 @@ export const experienceData = [
     title: "Senior Web Developer",
     education: "Bachelor of Science in Computer Science",
     experiences: [
-      "Led the development of a storage management platform using Next.js and Appwrite as the backend.",
+      "Led the development of a storage management platform using Next.js and Appwrite.",
       "Implemented dynamic dashboards with Tailwind CSS and Shadcn UI components.",
       "Optimized website performance, reducing load time by 30%.",
     ],
