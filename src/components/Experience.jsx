@@ -31,7 +31,7 @@ const Experience = () => {
         className="absolute -top-4 right-0 opacity-70 lg:hidden"
       />
       <div
-       
+        ref={containerRef}
         className="relative w-full h-full flex flex-col items-center justify-center gap-y-10 lg:gap-y-20 py-10"
       >
         {experienceData.map((data, i) => (
