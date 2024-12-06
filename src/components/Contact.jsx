@@ -1,14 +1,26 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useReducer, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Heading from "./sub/Heading";
 import emailjs from "@emailjs/browser";
 
+// Form Reducer to handle form state updates
+const formReducer = (state, action) => {
+  switch (action.type) {
+    case "SET_FIELD":
+      return { ...state, [action.name]: action.value };
+    case "RESET_FORM":
+      return { name: "", email: "", subject: "", message: "" };
+    default:
+      return state;
+  }
+};
+
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
+  // Initialize form state with useReducer
+  const [form, dispatch] = useReducer(formReducer, {
     name: "",
     email: "",
     subject: "",
@@ -22,11 +34,14 @@ const Contact = () => {
 
   // Handle input changes
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    dispatch({
+      type: "SET_FIELD",
+      name: e.target.name,
+      value: e.target.value,
+    });
   };
 
-  // Validate the form
+  // Validate form inputs
   const validateForm = () => {
     const { name, email, subject, message } = form;
     if (!name.trim()) {
@@ -74,7 +89,7 @@ const Contact = () => {
         message: "Message sent successfully! I will get back to you soon.",
         isError: false,
       });
-      setForm({ name: "", email: "", subject: "", message: "" });
+      dispatch({ type: "RESET_FORM" });
     } catch (error) {
       console.error("Email sending error:", error);
       setResponseMessage({
@@ -104,8 +119,8 @@ const Contact = () => {
             className="w-[400px] rounded-md opacity-80"
           />
         </motion.div>
+
         <motion.form
-          ref={formRef}
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 150 }}
           whileInView={{ opacity: 1, x: 0 }}
