@@ -1,26 +1,14 @@
 "use client";
 
-import { useState, useReducer } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import Heading from "./sub/Heading";
-import emailjs from "@emailjs/browser";
-
-// Form Reducer to handle form state updates
-const formReducer = (state, action) => {
-  switch (action.type) {
-    case "SET_FIELD":
-      return { ...state, [action.name]: action.value };
-    case "RESET_FORM":
-      return { name: "", email: "", subject: "", message: "" };
-    default:
-      return state;
-  }
-};
 
 const Contact = () => {
-  // Initialize form state with useReducer
-  const [form, dispatch] = useReducer(formReducer, {
+  const formRef = useRef();
+  const [form, setForm] = useState({
     name: "",
     email: "",
     subject: "",
@@ -31,69 +19,54 @@ const Contact = () => {
     message: "",
     isError: false,
   });
+  const [errors, setErrors] = useState({});
 
-  // Handle input changes
   const handleChange = (e) => {
-    dispatch({
-      type: "SET_FIELD",
-      name: e.target.name,
-      value: e.target.value,
-    });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Validate form inputs
   const validateForm = () => {
-    const { name, email, subject, message } = form;
-    if (!name.trim()) {
-      setResponseMessage({ message: "Name is required", isError: true });
-      return false;
-    }
-    if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
-      setResponseMessage({ message: "Valid email is required", isError: true });
-      return false;
-    }
-    if (!subject.trim()) {
-      setResponseMessage({ message: "Subject is required", isError: true });
-      return false;
-    }
-    if (!message.trim()) {
-      setResponseMessage({ message: "Message is required", isError: true });
-      return false;
-    }
-    return true;
+    const newErrors = {};
+    if (!form.name) newErrors.name = "Name is required";
+    if (!form.email) newErrors.email = "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(form.email))
+      newErrors.email = "Email is invalid";
+    if (!form.subject) newErrors.subject = "Subject is required";
+    if (!form.message) newErrors.message = "Message is required";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
     setLoading(true);
-    setResponseMessage({ message: "", isError: false });
-
     try {
-      // Sending the email using EmailJS
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
+          to_name: "Vincent",
           from_email: form.email,
+          to_email: "vincentombogo57@gmail.com",
           subject: form.subject,
           message: form.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
 
       setResponseMessage({
         message: "Thank you! I will get back to you as soon as possible.",
         isError: false,
       });
-
-      dispatch({ type: "RESET_FORM" });
+      setForm({ name: "", email: "", subject: "", message: "" });
+      setErrors({});
     } catch (error) {
-      console.error("Email sending error:", error);
+      console.error(error);
       setResponseMessage({
         message: "Ahh, something went wrong. Please try again.",
         isError: true,
@@ -105,7 +78,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="h-screen lg:h-auto py-20 lg:py-40 xs:py-0">
-      <Heading text="Get in Touch" />
+      <Heading text={"Get in Touch"} />
       <div className="w-full h-full my-auto flex lg:flex-col items-center justify-between lg:justify-center gap-x-20 lg:gap-x-0 gap-y-20">
         <motion.div
           initial={{ opacity: 0, y: 150 }}
@@ -114,20 +87,19 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <Image
-            src="/assets/contact.gif"
+            src={"/assets/contact.gif"}
             alt="Contact Image"
             width={400}
             height={400}
             className="w-[400px] rounded-md opacity-80"
           />
         </motion.div>
-
         <motion.form
-          onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 150 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4 }}
           viewport={{ once: true }}
+          onSubmit={handleSubmit}
           className="w-[600px] lg:w-[400px] sm:w-full flex flex-col gap-3"
         >
           <div className="w-full flex lg:flex-col gap-x-3 lg:gap-y-3">
@@ -139,6 +111,10 @@ const Contact = () => {
               className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
               placeholder="Your Name"
             />
+            {errors.name && (
+              <p className="text-red-500 text-xs">{errors.name}</p>
+            )}
+
             <input
               type="email"
               name="email"
@@ -147,7 +123,11 @@ const Contact = () => {
               className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
               placeholder="Your Email"
             />
+            {errors.email && (
+              <p className="text-red-500 text-xs">{errors.email}</p>
+            )}
           </div>
+
           <input
             type="text"
             name="subject"
@@ -156,30 +136,37 @@ const Contact = () => {
             className="w-full border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
             placeholder="Subject"
           />
+          {errors.subject && (
+            <p className="text-red-500 text-xs">{errors.subject}</p>
+          )}
+
           <textarea
             name="message"
             value={form.message}
             onChange={handleChange}
-            className="max-h-[250px] min-h-[150px] border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
+            className="max-h-[250px] min-h[150px] border border-yellow-500 rounded-md bg-zinc-100 px-4 py-2 text-sm tracking-wider text-gray-700 outline-none dark:bg-zinc-300"
             placeholder="Write me a message..."
-          ></textarea>
-          <button
+          />
+          {errors.message && (
+            <p className="text-red-500 text-xs">{errors.message}</p>
+          )}
+
+          <input
             type="submit"
             className="w-full border border-yellow-500 rounded-md bg-yellow-600 px-4 py-2 text-md font-light tracking-wider text-white outline-none hover:bg-yellow-500 transition-colors cursor-pointer"
-            disabled={loading}
-          >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-          {responseMessage.message && (
-            <p
-              className={`mt-4 text-center font-medium text-lg ${
-                responseMessage.isError ? "text-red-500" : "text-green-500"
-              }`}
-            >
-              {responseMessage.message}
-            </p>
-          )}
+            value={loading ? "Sending..." : "Send Message"}
+          />
         </motion.form>
+
+        {responseMessage.message && (
+          <p
+            className={`mt-4 text-center font-medium text-lg ${
+              responseMessage.isError ? "text-red-500" : "text-green-500"
+            }`}
+          >
+            {responseMessage.message}
+          </p>
+        )}
       </div>
     </div>
   );
