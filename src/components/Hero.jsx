@@ -76,7 +76,7 @@ const Hero = () => {
                 scale: buttonHover ? 2 : 0,
                 y: buttonHover ? -40 : 0,
               }}
-              transition={{ opacity: { delay: 0.4 } }}
+              transition={{ opacity: { delay: 0.7 } }}
             >
               Hello
             </motion.span>
@@ -85,7 +85,7 @@ const Hero = () => {
             My name is Vin Rain &{" "}
           </h1>
           <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
-            I like developing websites
+            I like developing cool websites
           </p>
         </motion.div>
         <motion.div
@@ -98,7 +98,7 @@ const Hero = () => {
             <a
               href={item.link}
               key={i}
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg hover:bg-red-400 hover:text-white transition-colors p-2"
             >
@@ -111,7 +111,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.7 }}
-          href="#"
+          href="#contact"
           className="mt-7 block w-max rounded-lg bg-red-400 px-3 py-1 font-light capitalize tracking-wider mx-auto text-white hover:bg-red-500 transition-colors"
           onMouseEnter={() => setButtonHover(true)}
           onMouseLeave={() => setButtonHover(false)}

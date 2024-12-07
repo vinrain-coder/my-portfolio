@@ -31,7 +31,7 @@ const Project = ({ data, index }) => {
         <h2 className="text-lg font-bold tracking-wide text-gray-500 dark:text-white transition-colors text-center break-words">
           {data.name}
         </h2>
-        <p className="text-justify text-gray-500 first-letter:pl-2 dark:text-gray-100 transition-colors max-h-[100px] overflow-auto text-sm break-words">
+        <p className="text-justify text-gray-500 first-letter:pl-2 dark:text-gray-100 transition-colors max-h-[100px] overflow-auto text-sm break-words xs:hidden">
           {data.desc}
         </p>
         {show && (
@@ -39,7 +39,7 @@ const Project = ({ data, index }) => {
             href={data.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 px-4 py-2 bg-yellow-800 text-white text-sm rounded-lg hover:bg-yellow-400 transition-colors text-center break-words"
+            className="mt-6 px-4 py-2 bg-yellow-800 text-white text-sm rounded-lg hover:bg-yellow-400 transition-colors text-center break-words"
           >
             View Website
           </a>

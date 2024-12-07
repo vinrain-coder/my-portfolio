@@ -27,14 +27,14 @@ const About = () => {
           <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[16px] sm:text-[14px] dark:text-white">
             {aboutText}
           </p>
-          <a
-            href="/nick-cv.pdf"
+          {/* <a
+            href="/assets/nick-cv.pdf"
             download=""
             className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-gray-300 bg-red-400 px-3 py-2 font-light text-white hover:bg-red-500 transition-colors"
           >
             <span className="">Download CV</span>
             <span className="text-xl">{downloadIcon}</span>
-          </a>
+          </a> */}
         </div>
       </div>
       <div className="mt-20 w-full flex flex-wrap items-center justify-between gap-x-7 gap-y-10">

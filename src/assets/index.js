@@ -183,7 +183,7 @@ export const skillsData = [
   },
   {
     name: "Three",
-    icon: "/assets/skills/three.png",
+    icon: "/assets/skills/threejs.png",
   },
   {
     name: "Typescript",
@@ -236,7 +236,6 @@ export const reviewData = [
 export const projectsButton = [
   "All",
   "Figma",
-  "Photoshop",
   "HTML",
   "CSS",
   "JavaScript",
@@ -245,6 +244,7 @@ export const projectsButton = [
   "NextJS",
   "FramerMotion",
   "ThreeJS",
+  "TypeScript",
 ];
 
 export const projectsData = [
@@ -252,35 +252,35 @@ export const projectsData = [
     name: "Social Media App - Vingram",
     desc: "A feature-rich social media app with dynamic dashboards, user authentication, and social connectivity.",
     url: "/assets/projects/image-1.png",
-    tech: ["NextJS", "TailwindCSS", "FramerMotion", "JavaScript"],
+    tech: ["NextJS", "TailwindCSS", "TypeScript"],
     link: "https://vingram.vercel.app",
   },
   {
     name: "SAAS Landing Page",
     desc: "An engaging SAAS landing page with interactive 3D elements and smooth animations.",
     url: "/assets/projects/image-2.png",
-    tech: ["ReactJS", "ThreeJS", "TailwindCSS", "JavaScript"],
+    tech: ["ReactJS", "ThreeJS", "TailwindCSS", "JavaScript", "FramerMotion"],
     link: "https://brainwave-tau-one.vercel.app",
   },
   {
     name: "Ecommerce Website - ShoePedi",
     desc: "A sleek e-commerce platform for ShoePedi with cloud storage integration and efficient product management.",
     url: "/assets/projects/image-3.png",
-    tech: ["NextJS", "JavaScript", "TailwindCSS", "Figma"],
+    tech: ["NextJS", "TypeScript", "TailwindCSS"],
     link: "https://shoepedi.vercel.app",
   },
   {
     name: "Bank Landing Page",
     desc: "A professional landing page for a bank, featuring financial solutions and a user-friendly interface.",
     url: "/assets/projects/image-4.png",
-    tech: ["ReactJS", "JavaScript", "CSS", "Photoshop"],
+    tech: ["ReactJS", "JavaScript", "CSS", "Figma"],
     link: "https://hubank.vercel.app",
   },
   {
     name: "Real Estate - FindHouse",
     desc: "A modern real estate platform for finding houses, showcasing properties with a sleek design.",
     url: "/assets/projects/image-5.png",
-    tech: ["NextJS", "FramerMotion", "HTML", "TailwindCSS"],
+    tech: ["NodeJs", "FramerMotion", "HTML", "TailwindCSS"],
     link: "https://findhouse-11nt.onrender.com/",
   },
   {
