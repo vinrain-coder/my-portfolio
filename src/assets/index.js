@@ -7,27 +7,15 @@ import GithubLineIcon from "remixicon-react/GithubLineIcon";
 
 export const heroIcons = [
   {
-    icon: <InstagramLineIcon />,
-    link: "https://www.instagram.com/yourprofile",
-  },
-  {
     icon: <FacebookCircleLineIcon />,
     link: "https://www.facebook.com/vincent.raini.9",
   },
-  {
-    icon: <DribbbleLineIcon />,
-    link: "https://www.dribbble.com",
-  },
-  {
-    icon: <YoutubeLineIcon />,
-    link: "https://www.youtube.com/vinrain",
-  },
+
   {
     icon: <GithubLineIcon />,
     link: "https://github.com/vinrain-coder",
   },
 ];
-
 
 //About me
 import GithubFillIcon from "remixicon-react/GithubFillIcon";
