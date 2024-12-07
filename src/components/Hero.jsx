@@ -85,7 +85,7 @@ const Hero = () => {
             My name is Vin Rain &{" "}
           </h1>
           <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
-            I like developing cool websites
+            I like developing websites
           </p>
         </motion.div>
         <motion.div
